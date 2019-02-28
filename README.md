@@ -1,2 +1,2 @@
 # LeetCode
- For leetcode code and note
+ My leetcode code, note and personal thinking
