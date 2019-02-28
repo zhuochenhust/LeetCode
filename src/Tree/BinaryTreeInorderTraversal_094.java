@@ -1,14 +1,12 @@
 package Tree;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Stack;
 
 import org.junit.Test;
 
-public class binaryTreeInorderTraversal {
+public class BinaryTreeInorderTraversal_094 {
 	/**
 	 * 递归法
 	 * 1. 中序遍历整颗以左节点为根的子树，将节点值存入res中
@@ -101,7 +99,7 @@ public class binaryTreeInorderTraversal {
     
     @Test
 	public void solutionTest(){
-    	binaryTreeInorderTraversal btit = new binaryTreeInorderTraversal();
+    	BinaryTreeInorderTraversal_094 btit = new BinaryTreeInorderTraversal_094();
     	// case 1, function 1
     	TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3, null, null), null));
     	List<Integer> res = btit.inorderTraversal(root);
