@@ -18,7 +18,7 @@ public class UniqueBinarySearchTreesII_095 {
 		return helper(1, n);
 	}
 	/*
-	 *  这一题因为所有的节点包含1~n的连续数字。所以每一棵树都分为1~k-1,k,k+1,n，三个部分。
+	 *  这一题因为所有的节点包含1~n的连续数字。所以每一棵以k为root的树左子树范围为1~k-1，右子树范围为k+1～n。
 	 *  用分治法可以很简单地得到结果。终结条件是当[1,k-1]和[k+1,n]空间为空时，返回只包含一个null元素的List。
 	 * */
 	public List<TreeNode> helper(int start, int end) {
