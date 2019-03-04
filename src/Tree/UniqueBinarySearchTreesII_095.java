@@ -23,7 +23,8 @@ public class UniqueBinarySearchTreesII_095 {
 	 * */
 	public List<TreeNode> helper(int start, int end) {
 		List<TreeNode> res = new ArrayList<>();
-		if (start > end) res.add(null);
+		//终止条件
+		if (start > end) res.add(null); 
 		//pick up a root
 		for (int i = start; i <= end; i ++) {
 			// all possible left subtrees if i is chosen to be a root
