@@ -13,6 +13,7 @@ import org.junit.Test;
  * Problem link: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
  **/
 
+//思路和102是完全相似的，只是为了zigzag加入了一个boolean判定
 public class BinaryTreeZigzagLevelOrderTraversal_103 {
 	public List<List<Integer>> zigzaglevelOrder(TreeNode root) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();

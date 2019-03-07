@@ -12,7 +12,6 @@ import org.junit.Test;
  * Problem link: https://leetcode.com/problems/binary-tree-level-order-traversal/
  **/
 
-
 public class BinaryTreeLevelOrderTraversal_102 {
 	public List<List<Integer>> levelOrder(TreeNode root) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
