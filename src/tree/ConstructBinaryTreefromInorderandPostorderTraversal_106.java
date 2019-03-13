@@ -1,10 +1,6 @@
 package tree;
 
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
-
-import org.junit.Test;
 
 /** 
  * Problem: Given inorder and postorder traversal of a tree, construct the binary tree.
