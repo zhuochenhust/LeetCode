@@ -8,3 +8,20 @@
 	2.1 DFS:数据结构：栈, 父节点入栈，父节点出栈，先右子节点入栈，后左子节点入栈。遍历全部节点即可
 	2.2 BFS:数据结构：队列, 父节点入队，父节点出队列，先左子节点入队，后右子节点入队。遍历全部节点即可，和102题一模一样。
 	那我自己顺便简单实现一下DFS和BFS, 见BinaryTreeSearch.java
+	
+3. 解题思路：
+	3.1 递归：Tree的题目是很容易用到递归的
+	
+	
+4. 常见问题：
+	4.1 求二叉树深度
+		// 找二叉树深度
+		public int findDepth(TreeNode root) {
+			if (root == null) {
+				return 0;
+			} else {
+				int leftDepth = findDepth(root.left);
+				int rightDepth = findDepth(root.right);
+				return  leftDepth > rightDepth ? leftDepth + 1 : rightDepth + 1;
+			}		
+		}
