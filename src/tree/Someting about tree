@@ -14,14 +14,4 @@
 	
 	
 4. 常见问题：
-	4.1 求二叉树深度
-		// 找二叉树深度
-		public int findDepth(TreeNode root) {
-			if (root == null) {
-				return 0;
-			} else {
-				int leftDepth = findDepth(root.left);
-				int rightDepth = findDepth(root.right);
-				return  leftDepth > rightDepth ? leftDepth + 1 : rightDepth + 1;
-			}		
-		}
+	4.1 求二叉树深度(Solution 110中用到过)
