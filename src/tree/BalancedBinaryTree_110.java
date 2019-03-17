@@ -55,7 +55,7 @@ public class BalancedBinaryTree_110 {
 		return res;
 	}
 	
-	// 找二叉树深度，递归法
+	// 找二叉树深度，递归
 	public int findDepth(TreeNode root) {
 		if (root == null) return 0;
 		int leftDepth = findDepth(root.left);
