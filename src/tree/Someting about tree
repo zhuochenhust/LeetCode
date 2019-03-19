@@ -15,3 +15,4 @@
 	
 4. 常见问题：
 	4.1 求二叉树深度(最大深度：见Solution 110, 最小深度： 见Solution 111)
+	4.2 DFS，BFS实现(见BinaryTreeSearch，用stack实现DFS，用queue实现BFS，见114，递归同样可以实现)
