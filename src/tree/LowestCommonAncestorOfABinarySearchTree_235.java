@@ -31,4 +31,33 @@ public class LowestCommonAncestorOfABinarySearchTree_235 {
             return root;
         }
     }
+	/**
+	 * Iteration(Time complexity: O(N), Space complexity: O(1))
+	 * 实际就是我们的目的只是找到split point，从它这里开始，p和q不属于同一子树
+	 * 由于可能不需要遍历整个子树，所以复杂度为O(1)
+	 * */
+	public TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
+        // Value of p
+        int pVal = p.val;
+
+        // Value of q;
+        int qVal = q.val;
+
+        // Start from the root node of the tree
+        TreeNode node = root; 
+        
+        // Traverse the tree
+        while (node != null) {
+            int parentVal = node.val;
+            if (parentVal > pVal && parentVal > qVal) {
+                node = node.left;
+            } else if (parentVal < pVal && parentVal < qVal) {
+                node = node.right;
+            } else {
+                // split point found
+                return node;
+            }
+        }
+        return null;
+    }
 }
