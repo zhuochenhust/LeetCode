@@ -2,9 +2,7 @@ package tree;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 import org.junit.Test;
@@ -16,34 +14,23 @@ import org.junit.Test;
 
 public class BalancedBinaryTree_110 {
 	/**
-	 * 直接法：遍历整棵树，看每个点是否符合要求
+	 * Iteration：遍历整棵树，看每个点是否符合要求
 	 * 需要
-	 * 	1. 实现BFS方法
+	 * 	1. BFS或者DFS遍历
 	 * 	2. 实现获得树深度的方法
 	 * */
 	public boolean isBalanced_1(TreeNode root) {
 		if (root == null) return true;
 		// 广度优先遍历整个树看每个节点树否符合高度平衡二叉树的条件
-		List<TreeNode> rootlist = BFS(root);
-		for (TreeNode node : rootlist) {
-			if (Math.abs(findDepth(node.left) - findDepth(node.right)) > 1) {
-				return false;
-			}
-		}	
-		return true;
-	}
-	
-	// BFS
-	public List<TreeNode> BFS(TreeNode root) {
-		List<TreeNode> res = new ArrayList<>();
-		if (root == null) return res;
-		Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
 		queue.offer(root);
 		while (!queue.isEmpty()) {
 			int size = queue.size();
 			for (int i = 0; i < size; i ++) {
 				TreeNode head = queue.poll();
-				res.add(head);
+				if (Math.abs(findDepth(head.left) - findDepth(head.right)) > 1) {
+                    return false;
+                }
 				if (head.left != null) {
 					queue.offer(head.left);
 				}
@@ -52,7 +39,7 @@ public class BalancedBinaryTree_110 {
 				}
 			}
 		}
-		return res;
+		return true;
 	}
 	
 	// 找二叉树深度，递归
@@ -64,7 +51,7 @@ public class BalancedBinaryTree_110 {
 	}
 	
 	/**
-	 * 改进法：求深度的方法在求深度的同时能知道是否是高度平衡二叉树
+	 * Recursion：求深度的方法在求深度的同时能知道是否是高度平衡二叉树
 	 * */
 	public boolean isBalanced_2(TreeNode root) {
 		if (root == null) return true;
