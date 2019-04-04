@@ -51,6 +51,7 @@ public class BalancedBinaryTree_110 {
 	}
 	
 	/**
+	 * 改进：
 	 * Recursion：求深度的方法在求深度的同时能知道是否是高度平衡二叉树
 	 * */
 	public boolean isBalanced_2(TreeNode root) {
