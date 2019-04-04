@@ -26,10 +26,15 @@
 	  > 迭代法（Iteration），用循环：用BFS或者DFS遍历每一个节点，看每一个node是否左left的深度和right深度差距不大于1，
 	    当然需要写一个递归方法findMaxDepth。
 	  > 递归法（Recursion）：这是一种改进，同样也需要写一个求深度的递归方法findMaxDepth，但是非常巧妙地是，在求深度的同时，我们就判断他平不平衡，不平衡返回-1，平衡才正常返回，这是非常巧妙的。
+	* 235. Lowest Common Ancestor of a Binary Search Tree
+	  > 递归法空间复杂度O（log（N））~O(N)
+	  > Iteration 空间复杂度O（1）
+	
+		
 	  	              
 
 	
 7. 复杂度
-	* 一般只要涉及到遍历，不论是DFS还是BFS，时间复杂度都是O（N）
-	* 一般数都涉及到遍历，比如100题SameTree，即使是递归，那也是DFS，内部实现还是stack结构，最差的情况Tree完全不平衡，空间复杂度就是O（N），因为每一层一个node，最差情况N个node全部都要存在stack里，空间复杂度位O（N
+	* 一般只要涉及到遍历整个树，不论是DFS还是BFS，时间复杂度都是O（N）
+	* 一般数都涉及到遍历整个树，比如100题SameTree，即使是递归，那也是DFS，内部实现还是stack结构，最差的情况Tree完全不平衡，空间复杂度就是O（N），因为每一层一个node，最差情况N个node全部都要存在stack里，空间复杂度位O（N
 	），但是如果是最好的情况，一个完全平衡的二叉树，复杂度就是O（log（N））
