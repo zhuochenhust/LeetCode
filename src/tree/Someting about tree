@@ -20,3 +20,8 @@
 5. 难理解的题目：
 	* 96. Unique Binary Search Trees: 一般只要你返回数量，不让你返回每种具体结构是什么，一般想想动态规划
 	* 124. Binary Tree Maximum Path Sum
+	
+6. 复杂度
+	* 一般只要涉及到遍历，不论是DFS还是BFS，时间复杂度都是O（N）
+	* 一般数都涉及到遍历，比如100题SameTree，即使是递归，那也是DFS，内部实现还是stack结构，最差的情况Tree完全不平衡，空间复杂度就是O（N），因为每一层一个node，最差情况N个node全部都要存在stack里，空间复杂度位O（N
+	），但是如果是最好的情况，一个完全平衡的二叉树，复杂度就是O（log（N））
