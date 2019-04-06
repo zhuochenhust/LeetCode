@@ -29,16 +29,12 @@ public class UniqueBinarySearchTree_096 {
 		G[1] = 1; // root only
 		/** 
 		 * 3. 转移方程
-		 *    0, 1，2，3,...，j - 1 || j(pick as root) || j+1, j+2,...,k
-		 *          G[j]                                    G[k-j-1]
-		 *    j为root的时候，状态数 = 左 * 右
-		 *    总状态数 = 0～n-1求和 [j] * [i-j-1]
 		 * */
-		for (int i = 2; i <= n; i ++) { //i就是上面的k，总节点数
-			for (int j = 0; j < i; j ++) { //以j为root的左子树BST，左子树最少0个节点，最多i-1个节点
-				G[i] += G[j] * G[i - j - 1];
-			}
-		}
+		for (int i = 2; i <= n; i ++) { // i 代表 n
+            for (int j = 1; j <= i; j ++) { // j 代表以 j 为root的BST
+                G[i] += G[j - 1] * G[i - j];
+            }
+        }
 		//返回总节点数i=n的值
 		return G[n];
 	}
