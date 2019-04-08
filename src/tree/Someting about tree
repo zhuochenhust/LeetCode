@@ -20,6 +20,7 @@
 5. 难理解的题目：
 	* 96. Unique Binary Search Trees: 一般只要你返回数量，不让你返回每种具体结构是什么，一般想想动态规划
 	* 124. Binary Tree Maximum Path Sum
+	* 297. Serialize and Deserialize Binary Tree
 
 6. 很有启发的题目：
 	* 110. Balanced Binary Tree， 
