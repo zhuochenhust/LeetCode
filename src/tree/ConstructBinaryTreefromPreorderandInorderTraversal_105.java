@@ -16,7 +16,7 @@ public class ConstructBinaryTreefromPreorderandInorderTraversal_105 {
 		// 1. 前序遍历数组的第一个值必然为root的值
 		int rootVal = preorder[0];
 		TreeNode tree = new TreeNode(rootVal);
-		// 2. 不论中序还是后序，都是先左子树，中序数组中root左边的子数组就是中序的左子树组，同样也可得到后序左子数组，自然想到递归
+		// 2. 中序数组中root左边的子数组就是中序的左子树组，同样也可得到前序左子数组，自然想到递归
 		int inorderrootPosition = getPosition(inorder, rootVal);		
 		int[] leftinorder = Arrays.copyOfRange(inorder, 0, inorderrootPosition);
 		int[] leftpreorder = Arrays.copyOfRange(preorder, 1, inorderrootPosition + 1);
