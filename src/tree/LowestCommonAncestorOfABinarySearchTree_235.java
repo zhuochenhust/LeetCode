@@ -10,20 +10,12 @@ public class LowestCommonAncestorOfABinarySearchTree_235 {
 	 * 	  and hence we return this common node as the LCA.
 	 * */
 	public TreeNode lowestCommonAncestor_1(TreeNode root, TreeNode p, TreeNode q) {
+		if (root == null || p == null || q == null) return root;
 
-        // Value of current node or parent node.
-        int parentVal = root.val;
-
-        // Value of p
-        int pVal = p.val;
-
-        // Value of q;
-        int qVal = q.val;
-
-        if (pVal > parentVal && qVal > parentVal) {
+        if (p.val > root.val && q.val > root.val) {
             // If both p and q are greater than parent
             return lowestCommonAncestor_1(root.right, p, q);
-        } else if (pVal < parentVal && qVal < parentVal) {
+        } else if (p.val < root.val && q.val < root.val) {
             // If both p and q are lesser than parent
             return lowestCommonAncestor_1(root.left, p, q);
         } else {
@@ -37,21 +29,16 @@ public class LowestCommonAncestorOfABinarySearchTree_235 {
 	 * 由于可能不需要遍历整个子树，所以复杂度为O(1)
 	 * */
 	public TreeNode lowestCommonAncestor_2(TreeNode root, TreeNode p, TreeNode q) {
-        // Value of p
-        int pVal = p.val;
-
-        // Value of q;
-        int qVal = q.val;
-
+		if (root == null || p == null || q == null) return root;
+        
         // Start from the root node of the tree
         TreeNode node = root; 
         
         // Traverse the tree
         while (node != null) {
-            int parentVal = node.val;
-            if (parentVal > pVal && parentVal > qVal) {
+            if (node.val > p.val && node.val > q.val) {
                 node = node.left;
-            } else if (parentVal < pVal && parentVal < qVal) {
+            } else if (node.val < p.val && node.val < q.val) {
                 node = node.right;
             } else {
                 // split point found
