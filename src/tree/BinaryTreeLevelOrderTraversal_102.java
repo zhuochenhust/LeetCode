@@ -17,7 +17,7 @@ public class BinaryTreeLevelOrderTraversal_102 {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
 		if (root == null) return res;
 		Queue<TreeNode> queue = new LinkedList<TreeNode>();
-		queue.offer(root);
+		queue.offer(root); // 用add也可以，因为是queue是new的LinkedList
 		while (!queue.isEmpty()) {
 			List<Integer> level = new ArrayList<Integer>();
 			int size = queue.size();
