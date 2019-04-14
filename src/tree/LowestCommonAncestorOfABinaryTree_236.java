@@ -1,7 +1,7 @@
 package tree;
 
 public class LowestCommonAncestorOfABinaryTree_236 {
-	//如果找到 p 或者 q 那么就没有必要接着递归，因为共同祖先只可能是该节点或该节点祖先
+	//如果找到 p 或者 q 那么就可以返回没有必要接着递归，因为共同祖先只可能是该节点或该节点祖先
 	//如果 root 为空了，说明这条路径上不可能有 p 或 q 节点，返回空
 	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
