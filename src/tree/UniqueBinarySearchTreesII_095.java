@@ -13,8 +13,6 @@ import org.junit.Test;
 public class UniqueBinarySearchTreesII_095 {
 	//遇到二叉树，优先考虑分治法递归，分治法和二叉树八字很和
 	public List<TreeNode> generateTrees(int n) {
-		List<TreeNode> res = new ArrayList<>();
-		if (n == 0) return res;
 		return helper(1, n);
 	}
 	/*
@@ -24,7 +22,7 @@ public class UniqueBinarySearchTreesII_095 {
 	public List<TreeNode> helper(int start, int end) {
 		List<TreeNode> res = new ArrayList<>();
 		//终止条件
-		if (start > end) res.add(null); 
+		if (start > end) return res;
 		//pick up a root
 		for (int i = start; i <= end; i ++) {
 			// all possible left subtrees if i is chosen to be a root
@@ -32,14 +30,31 @@ public class UniqueBinarySearchTreesII_095 {
 			// all possible right subtrees if i is chosen to be a root
 			List<TreeNode> right = helper(i + 1, end);
 			// connect left and right trees to the root i
-			for (TreeNode l : left) {
-				for (TreeNode r : right) {
-					TreeNode cur = new TreeNode(i);
-					cur.left = l;
-					cur.right = r;
-					res.add(cur);
-				}
-			}
+			if (left.size() == 0 && right.size() == 0) {
+                TreeNode root = new TreeNode(i);
+                res.add(root);
+            } else if (left.size() == 0) {
+                for (TreeNode r : right) {
+                    TreeNode root = new TreeNode(i); //注意每一个root初始化一定要在循环内
+                    root.right = r;
+                    res.add(root);
+                }
+            } else if (right.size() == 0) {
+                for (TreeNode l : left) {
+                    TreeNode root = new TreeNode(i);
+                    root.left = l;
+                    res.add(root);
+                }
+            } else {
+                for (TreeNode l : left) {
+                    for (TreeNode r: right) {
+                        TreeNode root = new TreeNode(i);
+                        root.left = l;
+                        root.right = r;
+                        res.add(root);
+                    }
+                }
+            }     
 		}		
 		return res;
 	}
