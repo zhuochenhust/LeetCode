@@ -35,7 +35,9 @@ public class UniqueBinarySearchTreesII_095 {
                 res.add(root);
             } else if (left.size() == 0) {
                 for (TreeNode r : right) {
-                    TreeNode root = new TreeNode(i); //注意每一个root初始化一定要在循环内
+                	//注意每一个root初始化一定要在循环内,因为如果不每次new一个新的root，root都是同一个内存地址，
+                	//每次给root一个新的right加入res,res里之前加入的root的right都会一起变化，因为root都是同一个内存地址
+                    TreeNode root = new TreeNode(i); 
                     root.right = r;
                     res.add(root);
                 }
