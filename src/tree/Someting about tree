@@ -35,6 +35,22 @@
 	* 235, 236 类似，一个是求二分查找树的两个节点的最小祖先，一个是求普通二叉树的两个节点的最小祖先
 	* 222. Count Complete TreeNodes 这题无脑递归复杂度太高，要应用complete tree的性质来降低复杂度
 	* 116. Populating Next Right Pointers in Each Node, 既可以BFS循环做也可以递归做，递归做很有意思
+	* 257. Binary Tree Paths 
+	  > 像这种涉及列出所有情况的字符串问题，首先想到递归没问题，然后是选择用“+”进行字符串拼接还是用StringBuilder。
+      > 用StringBuilder是必回溯的，也就是有个类似sb.deleteCharAt(sb.length() - 1)这个过程
+      > 这道题不能用sb.deleteCharAt(sb.length() - 1)回溯，因为有时候拼接 “->” ,有时候拼接数字比如“1”
+      > 所以用sb.setLength(original_length)来删除本次拼接的内容达到回溯的效果
+      > 为什么用"sb"和“append()"就要回溯，用"字符串"和"+"就不需要回溯呢？这个问题我想了很久，终于想出来了
+      	>> 因为用“字符串”和“+”做字符串拼接，String str = "a" + "b"方法实际上是str = new StringBuilder("a").append("b").toString() 实现的。
+      	>> 这样一来，用“+”实现字符串拼接的方式，每次执行helper()的时候，内部其实都创建了一个新的StringBuilder对象，开辟了新的内存空间
+      	>> 所以每次“+”拼接都相当于是修改在本层递归调用helper()的时候的path，不影响外层helper()的path。
+      	>> 所以每次return出来到上一层helper()的时候，上一层helper()创建的path根本没变，相当于自动的回溯了，不需要再手动回溯
+      	-------------------------------------------------------------------------------------------------
+      	>> 而对于用StringBuilder sb和append来实现字符串拼接的时候，sb一直是那个最开始创建的sb，所以每次修改了他的内容必须手动回溯
+      	>> 这就是为什么但凡用StringBuilder回溯，就得手动sb.deleteCharAt(sb.length() - 1), 以及这题里面用到的sb.setLength(original_length)
+      	>> 即将sb还原到上一层的长度的状态，删除掉本层helper()新加上去的内容，达到回溯的目的
+      	>> 如果不想手动自己写回溯，那就可以把helper里的sb.append(root.val)写成sb = new StringBuilder(sb).append(root.val);
+      	>> 但是这样做使用StringBuilder的意义就没了，浪费额外空间和时间。
 	
 7. 复杂度
 	* 一般只要涉及到遍历整个树，不论是DFS还是BFS，时间复杂度都是O(N)
