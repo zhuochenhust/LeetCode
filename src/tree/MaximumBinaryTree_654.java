@@ -13,7 +13,7 @@ public class MaximumBinaryTree_654 {
         return helper(nums, 0, nums.length - 1);
     }
     
-    // 之所以设置l和r两个边界，就是为了避免数组本身的变化。数组可以是不变的，运用规则的范围变化就可以了
+    // 之所以设置l和r两个边界，就是为了避免数组本身的变化。数组可以是不变的，只用运用规则的范围变化就可以了
     public TreeNode helper(int[] nums, int l, int r) {
         if (l > r) return null;
         int max_i = findMaxIndex(nums, l, r);
