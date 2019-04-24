@@ -31,6 +31,7 @@ public class PathSum_II_113 {
 		}
 		cur.add(root.val);
 		curSum += root.val;
+		// 下面的判断条件一定不要忘记，不然会有空指针异常
 		if (root.left != null) helper (root.left, res, cur, curSum, sum);
 		if (root.right != null) helper (root.right, res, cur, curSum, sum);
 		cur.remove(cur.size() - 1);
