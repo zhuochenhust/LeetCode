@@ -3,7 +3,7 @@ package backtracking;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subsets_077 {
+public class Subsets_078 {
 	public List<List<Integer>> subsets(int[] nums) {
 		List<List<Integer>> res = new ArrayList<>();
 		List<Integer> cur = new ArrayList<>();
