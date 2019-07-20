@@ -1,4 +1,6 @@
-class CountAndSay_038 {
+package string;
+
+public class CountAndSay_038 {
     public String countAndSay(int n) {
         if (n <= 0) return "";
         String res = "1";

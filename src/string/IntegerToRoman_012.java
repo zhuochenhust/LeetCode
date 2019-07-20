@@ -1,4 +1,6 @@
-class IntegerToRoman_012 {
+package string;
+
+public class IntegerToRoman_012 {
     public final int[] intDict = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
     public final String[] romanDict = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
     public String intToRoman(int num) {
