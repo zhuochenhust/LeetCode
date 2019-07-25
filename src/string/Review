@@ -7,11 +7,12 @@
 	  改进方法：以后看到这种长度选取的，一个个累加不如二分快，要有用二分法的敏感性。这就是改进方法. 
 	* 151. 判断一个char是否为空格，两种方式，第一种：看是否等于32；第二种：Character.isSpace(s.charAt(i - 1))
 	* 804. 一个字符c在26个字母中的位置，可以用c - 'a'来表示，这样比创建一个字符串s="abcdefghijklmnopqrstuvwxyz"然后用s.indexOf(c)来获得简单一些
-	* 43. Multiply Strings
+	* 43. Multiply Strings 可以和415 Add Strings对照着看
 	* 709. To Lower Case
 	  ascii table显示 小写的字符等于大写+32
 	* 383. RansomNote
 	  用char - ‘a’ 将a - z字符变成0-26，可以对应数组下标，数组下标对应的值就是对应字符出现的次数，很巧妙，字符的题目少不了和数字对应。
 	  只要某个字符对应的数字为下标的位置数组值为0，则说明不存在所需要的字符，返回false
 	  解法中也有写了通过hashmap实现的方法，这种方法不如数组，主要是为了夯实基础，了解map更改value的方法
+	* 415. Add Strings 有一些启发的，可以和43 Multiply Strings对照着看
 	 
