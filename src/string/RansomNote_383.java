@@ -1,7 +1,9 @@
 package string;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class RansomNote_383 {
 	public boolean canConstruct_1(String ransomNote, String magazine) {
@@ -24,9 +26,37 @@ public class RansomNote_383 {
 		}
 		return true;
 	}
+	
+	// 夯实基础，搞清楚map如何更改value值
+	public boolean canConstruct_2(String ransomNote, String magazine) {
+        if (ransomNote==null || magazine==null) return false;
+        if (ransomNote.length()>magazine.length()) return false;
+        if (ransomNote.length()==0) return true;
+
+
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int i=0; i< magazine.length(); i++) {
+            char cur = magazine.charAt(i);
+            if (map.containsKey(cur)) {
+                map.put(cur, map.get(cur) + 1);
+            } else {
+                map.put(cur, 1);
+            }
+        }
+        for (int i=0; i < ransomNote.length(); i++) {
+            char cur = ransomNote.charAt(i);
+            if (map.get(cur) == null || map.get(cur) == 0) {
+                return false;
+            } else {
+                map.put(cur, map.get(cur) - 1);
+            }
+        }
+        return true;
+    }
 
 	// 这是更好的方法，我们要记录每一个magazine中的字符和它对应的次数，可以用hashmap也可以用数组，但数组是最快的
-	public boolean canConstruct_2(String ransomNote, String magazine) {
+	public boolean canConstruct_3(String ransomNote, String magazine) {
 		if (ransomNote == null || magazine == null)
 			return false;
 		if (ransomNote.length() > magazine.length())
