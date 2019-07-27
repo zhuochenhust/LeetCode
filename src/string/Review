@@ -17,4 +17,8 @@
 	* 415. Add Strings 有一些启发的，可以和43 Multiply Strings对照着看
 	* 345. Reverse Vowels of a String 
 	  如何将char[] chars 变成对应的String？ 两种方法： 1. String.valueOf(chars) 2. new String(chars)
+	* 647. Palindromic Substrings
+	  回文问题常见套路：
+	  1. 写一个方法fun(String s, int left, int right){}, 左右指针往外扩散判断是否回文
+	  2. 两种情况：1. left = right; 2. right = left + 1;
 	 
