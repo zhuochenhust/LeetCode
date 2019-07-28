@@ -3,7 +3,6 @@ package backtracking;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
 
 public class BinaryWatch_401 {
 	public List<String> readBinaryWatch(int num) {
