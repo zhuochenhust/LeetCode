@@ -41,9 +41,4 @@ public class BinaryWatch_401 {
             generateDigitHelper(nums, count - 1, i + 1, sum + nums[i], res);    
         }
     }
-    
-    @Test
-    public void testSolution() {
-    	List<String> res = readBinaryWatch(3);
-    }
 }
