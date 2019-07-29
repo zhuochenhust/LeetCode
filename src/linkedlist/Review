@@ -1,6 +1,7 @@
 1. 难理解的题目：
 
 2. 很有启发的题目：
+   * 234. Palindrome Linked List：用到了寻找链表中点和反转链表两个重点
 
 3. 一些重点
    * 获取Linked List长度: 002里面的getLength()
@@ -8,4 +9,5 @@
    * 删除链表中某个节点： 237. Delete Node in a Linked List
    * 两两交换ListNode中节点对：24. Swap Nodes in Pairs
    * 判断一个Linked List是否有环：141. Linked List Cycle
+   * 寻找链表的中点：234. Palindrome Linked List 中有用到
  
