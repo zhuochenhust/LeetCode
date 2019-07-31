@@ -1,6 +1,9 @@
 1. 难理解的题目：
+   * 138. Copy List with Random Pointer
+   	 > 和133 Clone Graph有异曲同工之妙
 
 2. 很有启发的题目：
+   * 23. Merge k Sorted Lists: 递归加上21. merge two sorted lists
    * 234. Palindrome Linked List：用到了寻找链表中点和反转链表两个重点
      > 先找到链表的中点，然后反转后半部分链表看前后是否相等
      > 如何判断反转后是否相等呢？见234
@@ -12,4 +15,6 @@
    * 两两交换ListNode中节点对：24. Swap Nodes in Pairs
    * 判断一个Linked List是否有环：141. Linked List Cycle
    * 寻找链表的中点：234. Palindrome Linked List 中有用到
+   * 合并两个 sorted lists：21. merge two sorted lists
+   * 复制一个Linked List：138. Copy List with Random Pointer
  
