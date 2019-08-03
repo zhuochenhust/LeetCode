@@ -7,6 +7,9 @@
    * 234. Palindrome Linked List：用到了寻找链表中点和反转链表两个重点
      > 先找到链表的中点，然后反转后半部分链表看前后是否相等
      > 如何判断反转后是否相等呢？见234
+   * 143. Reorder List: 用到的工具方法：
+     > findMiddle()
+     > reverse()
 
 3. 一些重点
    * 获取Linked List长度: 002里面的getLength()
