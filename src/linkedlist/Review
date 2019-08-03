@@ -32,5 +32,15 @@
      > 138. Copy List with Random Pointer
    * Partition List:
      > 86. Partition List
+     
+ 4. 常用工具
+    * dummy node: when the head is not determinated
+      > 1. 删除节点
+      > 2. reverse
+      > 3. merge
+      > 4. partition list
+    * fast slow pointers
+      > 1. find the middle of linked list
+      > 2. linked list cycle
   
  
