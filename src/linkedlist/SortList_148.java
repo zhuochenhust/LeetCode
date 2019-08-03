@@ -51,7 +51,7 @@ public class SortList_148 {
             return head;
         }
        
-        ListNode mid = findMedian(head); // O(n)
+        ListNode mid = findMiddle(head); // O(n)
        
         ListNode leftDummy = new ListNode(0), leftTail = leftDummy;
         ListNode rightDummy = new ListNode(0), rightTail = rightDummy;
@@ -83,15 +83,6 @@ public class SortList_148 {
         return concat(left, middleDummy.next, right);
     }
    
-    private ListNode findMedian(ListNode head) {
-        ListNode slow = head, fast = head.next;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
-    }
-   
     private ListNode concat(ListNode left, ListNode middle, ListNode right) {
         ListNode dummy = new ListNode(0), tail = dummy;
        
@@ -104,7 +95,7 @@ public class SortList_148 {
     private ListNode getTail(ListNode head) {
         if (head == null) {
            return null;
-        } 
+        }
        
         while (head.next != null) {
             head = head.next;
