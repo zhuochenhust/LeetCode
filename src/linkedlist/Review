@@ -35,6 +35,13 @@
      > 138. Copy List with Random Pointer
    * Partition List:
      > 86. Partition List
+   * Sort List：掌握两种常见排序算法即可：148. Sort List
+     > Merge sort (分治算法，递归)
+     > Quick sort (分治算法，递归)
+       > 1. 以某一个位置当pivot(比如最左边，或者中间)，值比pivot小放左边，值比pivot大放右边
+       > 2. 一直取最左边或者中间当pivot，重复小的放左边，大的放右边，直到排序完成
+       > 3. Linked List的题目中，注意ListNode mid是一定要的。
+     
      
  4. 常用工具
     * dummy node: when the head is not determinated
