@@ -1,5 +1,7 @@
 package recursion;
 
+import java.util.Arrays;
+
 public class PartitionEqualSubsetSum_416 {
     public boolean canPartition(int[] nums) {
         if (nums == null || nums.length < 2) return false;
