@@ -1,7 +1,6 @@
 1. 难理解的题目：
-    * 894. All Possible Full Binary Trees
-      > 1. 我们用了Map<Integer, List<TreeNode>> map，key为N，value为对应的list
-      > 2. 左右必然都是FBT，左边左边节点数l从0～N-1，右边节点数r = N - 1 - l
+    
+      
 
 2. 很有启发的题目：
 	* 70. Climbing Stairs: 
@@ -9,6 +8,12 @@
 	> 但是直接这么做，效率低下，因为很多递归的结果被重复计算了，我们可以把计算结果用array保存起来，把n作为数组的下标，f（n）作为数组的值，如果array[n]!=0,
 	> 则说明已经被计算过了，直接返回；如果等于0，说明还没被计算过，那么让array[n]=f(n)=f(n-1)+f(n-2)再返回array[n]就可以了。
 	
+	* 894. All Possible Full Binary Trees
+      > 1. 我们用了Map<Integer, List<TreeNode>> map，key为N，value为对应的list
+      > 2. 左右必然都是FBT，左边左边节点数l从0～N-1，右边节点数r = N - 1 - l
+      > 3. 递归过程中的l和r在0～N范围内, 而用map储存每一个n = 0～N对应的结果，可以大幅度节约时间，不然每个相同的0～N为input的结果都要再算一遍，
+           那样将大幅增加运算时间。
+           
 3. Tips
    > 关于递归函数的参数，举个例子，如果用递归遍历二叉树时，可能需要记录每个节点的值或者经过的节点数目，前者可以用
      list来实现，由于list是引用对象，递归的每一次调用都会对其进行修改，只需要作为函数的参数传导，然后直接返回就

@@ -32,4 +32,31 @@ public class AllPossibleFullBinaryTrees_894 {
         }
         return map.get(N);
     }
+    
+    
+    // method 2: without using Map
+    public List<TreeNode> allPossibleFBT_2(int N) {
+        List<TreeNode> res = new ArrayList<>();
+        if (N == 0 || N % 2 == 0) return res;
+        helper(N, res);
+        return res;
+    }
+    
+    public void helper(int N, List<TreeNode> res) {
+        if (N == 1) {
+            res.add(new TreeNode(0));
+        } else if (N % 2 == 1) {
+            for (int l = 0; l < N; l ++) {
+                int r = N - 1 - l;
+                for (TreeNode left: allPossibleFBT(l)) {
+                    for (TreeNode right: allPossibleFBT(r)) {
+                        TreeNode node = new TreeNode(0);
+                        node.left = left;
+                        node.right = right;
+                        res.add(node);
+                    }
+                }
+            }
+        }
+    }  
 }
