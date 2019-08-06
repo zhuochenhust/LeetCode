@@ -1,4 +1,7 @@
 1. 难理解的题目：
+    * 894. All Possible Full Binary Trees
+      > 1. 我们用了Map<Integer, List<TreeNode>> map，key为N，value为对应的list
+      > 2. 左右必然都是FBT，左边左边节点数l从0～N-1，右边节点数r = N - 1 - l
 
 2. 很有启发的题目：
 	* 70. Climbing Stairs: 
