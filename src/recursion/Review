@@ -1,6 +1,6 @@
 1. 难理解的题目：
    * 698. Partition to K Equal Sum Subsets
-     > 比较典型的一道回溯法递归的题目，有一些难度，反复多揣摩
+     > 比较典型的一道回溯法递归的题目，有一些难度，反复多揣摩, 416. Partition Equal Subset Sum和698解法思路是一模一样的几乎
       
 
 2. 很有启发的题目：
