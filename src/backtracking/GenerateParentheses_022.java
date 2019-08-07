@@ -35,7 +35,7 @@ public class GenerateParentheses_022 {
 		List<String> res = new ArrayList<>();
 		if (n <= 0) return res;
 		//StringBuilder sb = new StringBuilder();
-		helper(res, "", n, n);
+		helper_2(res, "", n, n);
 		return res;
 	}
 	
@@ -46,12 +46,12 @@ public class GenerateParentheses_022 {
 		}
 		if (open_left > 0) {
 			// sb.append('(');
-			helper(res, s + "(", open_left - 1, close_left);
+			helper_2(res, s + "(", open_left - 1, close_left);
 			// sb.deleteCharAt(sb.length() - 1);
 		}
 		if (close_left > open_left) {
 			// sb.append(')');
-			helper(res, s + ")", open_left, close_left - 1);
+			helper_2(res, s + ")", open_left, close_left - 1);
 			// sb.deleteCharAt(sb.length() - 1);
 		}
 	}
