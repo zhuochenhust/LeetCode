@@ -1,6 +1,12 @@
 1. 难理解的题目：
    * 698. Partition to K Equal Sum Subsets
      > 比较典型的一道回溯法递归的题目，有一些难度，反复多揣摩, 416. Partition Equal Subset Sum和698解法思路是一模一样的几乎
+   * 761. Special Binary String
+     > 这道题目和括号本质一模一样，'1'代表正括号，'0'代表反括号，然后输出尽可能1在前面的字符串
+     > 字符串的开头一定是'1'，结尾一定是'0'，中间则是合理的(类似正反括号规则)的'1''0'字符对
+     > 我们将所有的符合条件的字符对加入list，然后用Collections.sort(list, Collections.reverseOrder());从大到小排序
+     > 将排序后的list用sb拼接起来返回即可
+   
       
 
 2. 很有启发的题目：
