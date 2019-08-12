@@ -1,5 +1,5 @@
 回文题目列表：
-> 5. Longest Palindromic Substring (Medium)
+> 5. Longest Palindromic Substring (Medium) (DONE)
 > 336. Palindrome Pairs (Hard)
 > 9. Palindrome Number (Easy)
 > 125. Palindrome Number (Easy)
@@ -28,6 +28,9 @@
    * 回文字符串常用思路(5. Longest Palindromic Substring)：
      > String palindrome(String s, int left, int right) //以回文串为中心，从中心向左右扩散
      > palindrome(s, i, i) then palindrome(s, i, i + 1) //回文串中心可以是一个字符也可以是两个一样的字符
+   * 回文数字思路
+     > 用第7题reverse integer的算法：x != 0 时，r = r * 10 + x % 10; x = x / 10; 得到reversed的x值，注意要用一个变量储存x原来的值
+     > 返回x_original == x_reversed
 
 
 
