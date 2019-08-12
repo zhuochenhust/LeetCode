@@ -6,6 +6,10 @@
      > current max sum:     [-2, 1, -2, 4,  3, 5, 6,  1, 5]（if(nums[i-1]>0) nums[i]+=nums[i-1]之后的nums[i]）
      > max sum seen so far: [-2, 1,  1, 4,  4, 5, 6,  6, 6]（maxSum）
    * 5. Longest Palindromic Substring 也可以用DP来做，这道题在palindrome包中
+     > dp[i][j]表示从i到j的字符串是否是回文串
+     > 若s[i] == s[j]，是否回文取决于dp[i + 1][j - 1]
+     > 若s[i] != s[j]，dp[i][j]直接就是false
+     > dp的进行是按字符串长度从1～n推进的
 
 3. 一些重点
 
