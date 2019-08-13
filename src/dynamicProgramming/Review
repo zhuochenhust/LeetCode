@@ -10,6 +10,10 @@
      > 若s[i] == s[j]，是否回文取决于dp[i + 1][j - 1]
      > 若s[i] != s[j]，dp[i][j]直接就是false
      > dp的进行是按字符串长度从1～n推进的
+   * 96. Unique Binary Search Trees 树的动归，在tree包中
+   * 338. Counting Bits
+     > 转移方程比较有启发性
+     > 小tips: x / 2 is x >> 1 and x % 2 is x & 1
 
 3. 一些重点
    * 常见步骤：1. 构建dp数组 2. 初始化 3. 转移方程 参考典型题目：70. Climbing Stairs
