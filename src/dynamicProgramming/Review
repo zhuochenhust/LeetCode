@@ -14,6 +14,8 @@
    * 338. Counting Bits
      > 转移方程比较有启发性
      > 小tips: x / 2 is x >> 1 and x % 2 is x & 1
+   * 139. Word Break
+     > 用到了三种方法：暴力递归，备忘录递归（自顶向下dp），动态规划（自底向上）
 
 3. 一些重点
    * 常见步骤：1. 构建dp数组 2. 初始化 3. 转移方程 参考典型题目：70. Climbing Stairs
