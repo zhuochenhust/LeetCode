@@ -16,8 +16,15 @@
      > 小tips: x / 2 is x >> 1 and x % 2 is x & 1
    * 139. Word Break
      > 用到了三种方法：暴力递归，备忘录递归（自顶向下dp），动态规划（自底向上）
+   * 152. Maximum Product Subarray
+   	 > 典型dp: 利用dp数组
+   	 > 优化dp: 不用dp数组，深入理解dp核心本质，降低空间复杂度
+   	        > 通过观察状态转移函数，我们可以看出，每次计算只是用到前一个maxhere和minhere，
+   	          所以这里可以对程序进行改进，每次对前一个maxhere和minhere做记录，这样就节省了空间的存储。
 
 3. 一些重点
    * 常见步骤：1. 构建dp数组 2. 初始化 3. 转移方程 参考典型题目：70. Climbing Stairs
+   * 不是每一个dp问题都是一个数组，都是返回数组最后一位的，dp的思想只是记录之前的状态而减少暴力递归的复杂度，甚至不是每一个dp都需要数组
+     > 152. Maximum Product Subarray
 
 	  
