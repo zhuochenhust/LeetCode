@@ -30,4 +30,4 @@
    * 常见步骤：1. 构建dp数组 2. 初始化 3. 转移方程 参考典型题目：70. Climbing Stairs
    * 不是每一个dp问题都是一个数组，都是返回数组最后一位的，dp的思想只是记录之前的状态而减少暴力递归的复杂度，甚至不是每一个dp都需要数组
      > 152. Maximum Product Subarray
-   * 不是每一个dp数组都是一位数组：120. Triangle
+   * 不是每一个dp数组都是一位数组：120. Triangle; 64. Minimum Path Sum
