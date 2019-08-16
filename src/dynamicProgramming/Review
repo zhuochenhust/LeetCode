@@ -44,6 +44,8 @@
      > 关于完全平方数的dp，有点启发
    * 120. Triangle
      > 二维dp数组应用
+   * 303. Range Sum Query - Immutable
+     > 注意把dp的过程写在构造函数里面，运行速度快一些
 
 3. 一些重点
    * 常见步骤：1. 构建dp数组 2. 初始化 3. 转移方程 参考典型题目：70. Climbing Stairs
