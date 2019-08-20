@@ -11,6 +11,14 @@
       > 然后我们向右slide j，如果slide后的字符不在HashSet中，就继续向右slide，
       > 直到S[j]已经存在于HashSet中为止。在这个点我们就找到了以索引 i 为起点的最大子字符串，
       > 我们对所有 i 操作一遍就可以得到结果了。
+   * 7. Reverse Integer
+	  > 1. 由于int数据类型是32位，范围是-2^32 到 2^32 - 1，后面有out = out * 10 + x % 10的操作，
+	        out有可能overflow，所以用long类型声明out，因为long类型是64位，范围是-2^63 到 2^63 - 1
+      > 2. 记住reverse int的算法：只要x != 0： out = out * 10 + x % 10; x = x / 10;
+      > 3. out的overflow判断，out若大于Integer.MAX_VALUE或者小于Integer.MIN_VALUE，返回0。
+           这里一定要考虑越界，因为reverse以后的数字是可能overflow的
+      > 4. 最后返回out要做强制类型转换成int：(int)out
+      
      
 
 3. 经典题目：
