@@ -3,6 +3,15 @@
 1. 难理解的题目：
 
 2. 很有启发的题目：
+   * 3. Longest Substring Without Repeating Characters
+      > O(n)时间复杂度 Sliding Window
+      > Sliding Window是一种常常用于array/string问题的抽象概念，i，j都是索引，[ i, j ) 左闭右开就是window，
+      > sliding window就是左右两个边界向特定方向slide，比如向右slide 1，就是[ i + 1, j + 1 )。
+      > 回到问题本身，我们用HashSet储存当前window [ i, j ) 的字符，最初时候 i = j ，
+      > 然后我们向右slide j，如果slide后的字符不在HashSet中，就继续向右slide，
+      > 直到S[j]已经存在于HashSet中为止。在这个点我们就找到了以索引 i 为起点的最大子字符串，
+      > 我们对所有 i 操作一遍就可以得到结果了。
+     
 
 3. 经典题目：
    * 1. Two Sum
