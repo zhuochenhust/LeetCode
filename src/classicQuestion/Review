@@ -18,6 +18,18 @@
       > 3. 由于out类型一开始设置成了更大容器long,由于最后要转换成int,需要有out的overflow判断，
            out若大于Integer.MAX_VALUE(2^31 - 1)或者小于Integer.MIN_VALUE(-2^31)，返回0。
       > 4. 最后返回out要做强制类型转换成int：(int)out
+   * 8. String to Integer (atoi)
+      > 1. 用trim()方法移除空格字符
+	  > 2. 移除空格后的字符再判断是否为null以及length()是否为0
+      > 3. + - 判断
+      > 4. 计算真实值
+           1. 由于int数据类型是32位，范围是-2^32 到 2^32 - 1，后面有tmp = tmp * 10 + digit的操作，
+              tmp有可能overflow，所以用long类型声明out，因为long类型是64位，范围是-2^63 到 2^63 - 1
+           2. i < str.length()循环，int digit = str.charAt(i) - '0’;
+              1. 正则tmp = 10*tmp + digit; 随时判断是否overflow
+              2. 负则tmp = 10*tmp - digit; 随时判断是否overflow
+      > 5. 返回 (int) tmp
+     
       
      
 
