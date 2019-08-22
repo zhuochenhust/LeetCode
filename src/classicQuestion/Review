@@ -43,6 +43,9 @@
    * 1. Two Sum
       > Map的key - value对是nums[i] & i
    * 15. 3Sum
+      > 1. 对nums排序，用Arrays.sort(nums)
+	  > 2. 既然是3-sum，需要用i，j，k三个指针
+      > 3. i从0开始，j从1开始，k从最后一个开始，i从左往右一个个移动，j 和 k 始终在 i 右边，j 和 k 类似sliding window
    * 16. 3Sum Closest   
    * 18. 4Sum
 
