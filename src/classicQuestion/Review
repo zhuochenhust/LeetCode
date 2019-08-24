@@ -48,6 +48,9 @@
       > 3. i从0开始，j从1开始，k从最后一个开始，i从左往右一个个移动，j 和 k 始终在 i 右边，j 和 k 类似sliding window
    * 16. 3Sum Closest   
    * 18. 4Sum
+	   > 1. 和3Sum去重操作是一样的，但是注意3Sum这道题默认的target是0，所以当nums[i]大于0的时候就直接break，但是这里是指定target，注意不可以nums[i] > 0 的时候直接break，因为如果target是负数，比如-11，nums[i] = -9, 后面有可能加的是-2。
+	   > 2. 4Sum就是多引入了一个维度而已
+   
 
 
 	 
