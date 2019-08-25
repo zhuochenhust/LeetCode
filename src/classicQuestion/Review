@@ -50,6 +50,11 @@
    * 18. 4Sum
 	   > 1. 和3Sum去重操作是一样的，但是注意3Sum这道题默认的target是0，所以当nums[i]大于0的时候就直接break，但是这里是指定target，注意不可以nums[i] > 0 的时候直接break，因为如果target是负数，比如-11，nums[i] = -9, 后面有可能加的是-2。
 	   > 2. 4Sum就是多引入了一个维度而已
+   * 20. Valid Parentheses
+	   > 1. 这里要用stack结构，因为括号是对称出现才valid
+	   > 2. 注意pop()是把stack顶的对象移除并返回该对象，所以调用pop方法stack顶对象就被移除了
+	   > 3. 注意最后返回是stack.isEmpty()，因为输入的String s如果是对称的，自然stack 最后会empty，反之比如说输入是“【”，则stack不empty，返回false
+       
    
 
 
