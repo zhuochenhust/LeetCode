@@ -53,11 +53,12 @@ public class SubstringWithConcatenationOfAllWords_030 {
         
         for (int i = 0; i <= s.length() - len; i += len) {
             String str = s.substring(i, i + len);
-            if (!wordDict.containsKey(str)) {
+            if (!wordDict.containsKey(str)) { // str不是wordDict里的string，返回false
                 return false;
             } else {
                 if (tmpDict.containsKey(str)) {
                     tmpDict.put(str, tmpDict.get(str) + 1);
+                    // 如果包含该str，但是个数已经超过了原来wordDict中str的个数，也返回false
                     if (tmpDict.get(str) > wordDict.get(str)) {
                         return false;
                     }
