@@ -1,4 +1,6 @@
 1. 难理解的题目：
+	* 30. Substring with Concatenation of All Words
+	    > 我的方法并不高效，考虑是否有更高效的方法？ 
 
 2. 很有启发的题目：
 	* 14. Longest Common Prefix
