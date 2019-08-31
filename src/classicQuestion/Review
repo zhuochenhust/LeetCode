@@ -1,6 +1,15 @@
 本包的经典问题是最早的经典LeetCode题目，也是做过的题目，重新梳理一遍
 
 1. 难理解的题目：
+   * 32. Longest Valid Parentheses
+       > 1. 我们把leftmost这个作为当前String最左边的括号的index，初始值是-1，最长的valid括号长度设置为maxLen，初始值为0
+	   > 2. 用Stack这个数据结构，每次遇到正括号就把它的index push到stack中
+       > 3. 遇到反括号：
+		    1. 如果stack不是空的，stack.pop()
+		        1. 如果stack是空的，当前Length = 当前index - leftmost
+		        2. 如果stack不是空的，当前Length = 当前index - stack.peek() 
+		    2. 如果stack是空的，leftmost = 当前index
+		   
 
 2. 很有启发的题目：
    * 3. Longest Substring Without Repeating Characters
