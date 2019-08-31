@@ -88,6 +88,19 @@
 	   > 1. 这里要用stack结构，因为括号是对称出现才valid
 	   > 2. 注意pop()是把stack顶的对象移除并返回该对象，所以调用pop方法stack顶对象就被移除了
 	   > 3. 注意最后返回是stack.isEmpty()，因为输入的String s如果是对称的，自然stack 最后会empty，反之比如说输入是“【”，则stack不empty，返回false
+   * 33. Search in Rotated Sorted Array
+       > 1. corner case判断
+	   > 2. mid = (left + right) / 2
+	   > 3. while(right > left + 1) ：right和left不挨在一起
+	   > 4. 如果nums[mid] == target, 返回mid
+	   > 5. 如果 nums[left] < nums[mid]： mid在左边
+		    1. 如果target在nums[left]和nums[mid]之间，right = mid
+		    2. 否则 left = mid
+	   > 6. 如果nums[mid] < nums[right]：mid在右边
+		    1. 如果target在nums[mid]和nums[right]之间，left = mid
+		    2. 否则 right = mid
+	   > 7. 最后出了循环如果都没返回mid，说明left和right挨在一起，而target就是两者中的某一个或者不存在
+      
        
    
 
