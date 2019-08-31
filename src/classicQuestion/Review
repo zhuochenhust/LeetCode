@@ -100,6 +100,15 @@
 		    1. 如果target在nums[mid]和nums[right]之间，left = mid
 		    2. 否则 right = mid
 	   > 7. 最后出了循环如果都没返回mid，说明left和right挨在一起，而target就是两者中的某一个或者不存在
+	* 34. Find First and Last Position of Element in Sorted Array
+		> 关键思路：由于要求了时间复杂度，所以二分法
+		> 1. corner case
+		> 2. 二分法，一旦nums[mid] == target 返回，然后我们以mid这个位置为中心左右延伸找到等于目标值的第一个和最后一个index
+		> 3. 由于mid之前定义在while循环体内，所以出了循环体就找不到这个变量了，所以重新定义一个mid来储存二分法找到的nums[mid]等于target的那个mid
+		> 4. 创建左右指针i和j，初始值都是mid，然后只要i没到左边界或者j没到右边界，就执行循环
+		> 5. 循环中定义isMatch这个boolean变量，如果i和j都没能让isMatch等于true，就break这个循环
+		> 6. 返回new int[] {i, j}
+	
       
        
    
