@@ -2,6 +2,9 @@
 
 1. 难理解的题目：
    * 32. Longest Valid Parentheses
+       > 举例子：( () () ) () ) (  )
+                0 12 34 5 67 8 9 10
+                 
        > 1. 我们把leftmost这个作为当前String最左边的括号的index，初始值是-1，最长的valid括号长度设置为maxLen，初始值为0
 	   > 2. 用Stack这个数据结构，每次遇到正括号就把它的index push到stack中
        > 3. 遇到反括号：
