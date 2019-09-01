@@ -16,3 +16,8 @@
 	* 401. Binary Watch
 	* 53. Maximum Subarray, 除了O(n)的方法，还有分治算法
 	* 22. Generate Parentheses
+	* 36. Valid Sudoku (碰到不重复问题，一定要想到HashSet)
+		> 1. 先判断每一行是否valid
+		> 2. 再判断每一列是否valid
+		> 3. 最后判断每一个3 * 3小块是否valid
+	* 37. Sudoku Solver
