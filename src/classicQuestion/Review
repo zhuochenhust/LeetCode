@@ -12,6 +12,11 @@
 		        1. 如果stack是空的，当前Length = 当前index - leftmost
 		        2. 如果stack不是空的，当前Length = 当前index - stack.peek() 
 		    2. 如果stack是空的，leftmost = 当前index
+   * 41. First Missing Positive
+	   > 1. 数组最小的缺失正整数的最小值是1，最大值是nums.length
+	   > 2.【3，4，-1，1】正确的情况应该是【1，2，3，4】，1应该被hash到index = 0这个位置，3应该被hash到index = 2这个位置，hash function应该是index = nums[i] - 1, 也就是nums[i] 应该存在于nums[i] - 1 这个位置上
+	   > 3. 只要nums[i] 不在他应该在的位置上，则swap（nums，i，应该在的index），把nums[i]和nums[nums[i] - 1]交换
+	   
 		   
 
 2. 很有启发的题目：
