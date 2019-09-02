@@ -78,6 +78,14 @@
      * 42. Trapping Rain Water
          > 看横轴每一个单位长度，能承载的水量是多少：
          > 那就是它左边最高和右边最高中矮的那一个和当前位置高度的高度差
+     * 49. Group Anagrams
+		 > 1. 遍历字符串数组
+		 > 2. 将遍历到的字符串转换成字符数组，然后排序，然后再转换成字符串作为key
+		 > 3. 用到HashMap，
+		      1. 如果key从没出现过，就put(key, new ArrayList<>()), 然后map.get(key).add(strs[i])
+		      2. 如果key出现过了，就直接map.get(key).add(strs[i])
+		 > 4. map的每个key的value就是List<List<String>> 里面的 List<String>
+     
          
      
 
