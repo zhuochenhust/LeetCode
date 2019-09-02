@@ -116,6 +116,8 @@
 		> 4. 创建左右指针i和j，初始值都是mid，然后只要i没到左边界或者j没到右边界，就执行循环
 		> 5. 循环中定义isMatch这个boolean变量，如果i和j都没能让isMatch等于true，就break这个循环
 		> 6. 返回new int[] {i, j}
+    * 48. Rotate Image
+        > 我们先旋转矩阵最外层，再做里面的层
 	
       
        
