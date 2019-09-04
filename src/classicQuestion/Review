@@ -125,7 +125,8 @@
 		> 5. 循环中定义isMatch这个boolean变量，如果i和j都没能让isMatch等于true，就break这个循环
 		> 6. 返回new int[] {i, j}
     * 48. Rotate Image
-        > 我们先旋转矩阵最外层，再做里面的层
+    * 54. Spiral Matrix
+        > 我们先旋转矩阵最外层，再做里面的层，两道题很类似
     * 50. Pow(x, n)
 	    > 1. power(x, n) = 
 	         1. power(x, n / 2) * power(x, n / 2); (n为偶数)
