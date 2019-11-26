@@ -3,7 +3,7 @@ package tree;
 import org.junit.Test;
 
 public class BinaryTreeMaximumPathSum_124 {
-	int max = Integer.MIN_VALUE;;
+	int max = Integer.MIN_VALUE;
     public int maxPathSum(TreeNode root) {
         helper(root);
         return max;
